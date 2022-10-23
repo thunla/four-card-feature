@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --red-color: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --light-gray: hsl(0, 0%, 98%);
+    --white-color: hsl(0, 0%, 100%);
+}
+body{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    background-color: var(--light-gray);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content__header{
+    margin-bottom: 56px;
+}
+.content__header h1{
+    white-space: pre-line;
+    font-weight: 400;
+    color: var(--dark-blue);
+    margin-bottom: 24px;
+    text-align: center;
+}
+.content__header h1>span{
+    font-weight: 600;
+}
+.content__header p{
+    white-space: pre-line;
+    color: var(--dark-blue);
+    font-weight: 400;
+    text-align: center;
+}
+.content__body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+}
+.box{
+    background: var(--white-color);
+    min-height: 250px;
+    margin-bottom: 36px;
+    border-radius: 8px;
+    padding: 36px;
+    width: 400px;
+    box-shadow: 0 0 25px var(--grayish-blue);
+    position: relative;
+    border-top: 4px solid;
+}
+.box h4{
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    margin-bottom: 12px;
+}
+.box p{
+    color: var(--grayish-blue);
+}
+.box img{
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    transform: translate(-10%, -10%);
+}
+.box--supervisor{
+    border-color: var(--cyan) !important;
+}
+.box--teambuilder{
+    border-color: var(--red-color);
+}
+.box--karma{
+    border-color: var(--orange);
+}
+.box--calculator{
+    border-color: var(--blue);
+}
+
+@media screen and (max-width: 1279px) {
+    .container{
+        height: auto;
+    }
+    .content__body{
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+        gap: 0;
+    }
+    .box{
+        width: 100%;
+        min-height: 230px;
+        margin-bottom: 24px;
+    }
+    .content__header{
+        width: 90%;
+        margin: 16px auto 36px;
+    }
+    .content__header h1{
+        font-size: 1.5rem;
+        text-align: left;
+    }
+    .content__header p{
+        white-space: normal;
+    }
+}
